@@ -132,6 +132,7 @@ scene.setBackgroundImage(img`
     ................................................................................................................................................................
     ................................................................................................................................................................
     `)
+game2 = 1
 game.showLongText("Press A to Begin!          Made by shps181717", DialogLayout.Bottom)
 music.beamUp.play()
 scene.setBackgroundImage(assets.image`starry_Galaxy`)
@@ -255,7 +256,7 @@ forever(function () {
         if (mySprite.overlapsWith(mySprite2)) {
             pause(100)
             music.stopAllSounds()
-            game.over(false, effects.dissolve)
+            game.over(false, effects.confetti)
             game.reset()
         }
     }
@@ -263,10 +264,10 @@ forever(function () {
 forever(function () {
     if (mySprite.overlapsWith(mySprite3)) {
         music.stopAllSounds()
-        game.over(false, effects.melt)
+        game.over(false, effects.confetti)
     }
     if (mySprite.overlapsWith(mySprite4)) {
         music.stopAllSounds()
-        game.over(false, effects.melt)
+        game.over(false, effects.confetti)
     }
 })
